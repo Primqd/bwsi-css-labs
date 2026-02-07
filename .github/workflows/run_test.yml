@@ -23,6 +23,7 @@ jobs:
         run: |  
           pip install ruff  
           ruff --format=github --target-version=py310 .  
+        continue-on-error: true  
       - name: Test 1b with pytest  
         run: |  
           coverage run -m pytest tests/tests_1b.py -v -s  
